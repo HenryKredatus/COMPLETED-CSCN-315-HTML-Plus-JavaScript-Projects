@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Gallery</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="images/Logo.png" alt="Logo" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+
+    <main class="gallery">
+      <h1>Image Gallery</h1>
+      <div class="grid">
+        <img
+          src="images/Chrysler Pacifica.jpg"
+          alt="Chrysler Pacifica"
+          class="grid-img"
+        />
+        <img
+          src="images/Dodge Challenger.jpg"
+          alt="Dodge Challenger"
+          class="grid-img"
+        />
+        <img
+          src="images/Honda Accord.png"
+          alt="Honda Accord"
+          class="grid-img"
+        />
+        <img
+          src="images/Honda Odyssey.png"
+          alt="Honda Odyssey"
+          class="grid-img"
+        />
+        <img
+          src="images/Jeep Grand Cherokee.jpg"
+          alt="Jeep Grand Cherokee"
+          class="grid-img"
+        />
+        <img src="images/Nissan Cube.jpg" alt="Nissan Cube" class="grid-img" />
+        <img src="images/Ram 2500.jpg" alt="Ram 2500" class="grid-img" />
+        <img
+          src="images/Tesla Cybertruck.jpg"
+          alt="Tesla Cybertruck"
+          class="grid-img"
+        />
+      </div>
+    </main>
+
+    <div id="lightbox" class="lightbox">
+      <span class="close">&times;</span>
+      <img class="lightbox-img" src="" />
+      <div class="controls">
+        <button id="prev">Prev</button>
+        <button id="next">Next</button>
+        <button id="play">Slideshow</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
