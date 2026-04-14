@@ -1,0 +1,160 @@
+<!doctype html>
+<!--
+AI Usage Note:
+
+This website was developed with assistance from an AI tool (ChatGPT) to support planning, structuring, and improving both functionality and design across multiple pages.
+
+Key contributions included:
+
+- Building and organizing a multi-page website structure (Home, Products, Learn, About, Contact) with consistent navigation and layout.
+- Implementing interactive JavaScript features across pages, including:
+  • A theme toggle (light/dark mode) with saved user preference via localStorage
+  • A homepage image carousel with automatic sliding and manual controls
+  • A product filtering and sorting system (category-based filtering and alphabetical sorting)
+  • A product comparison system that dynamically adds/removes items and renders comparison cards
+  • An FAQ accordion system for expandable/collapsible answers
+  • A quiz component with instant feedback
+  • An interactive timeline feature on the About page with dynamic content updates
+  • A contact form with validation (required fields + email format checking) and a live preview system
+
+- Enhancing UI/UX consistency across all pages:
+  • Standardized header, navigation styling, and footer layout
+  • Improved card-based layouts for products and features
+  • Added visual polish such as hover effects, overlays, and spacing improvements
+  • Introduced structured sections for readability and user flow
+
+- Refining CSS organization and removing unnecessary or duplicate styling while maintaining functionality and visual consistency.
+
+All functionality was integrated to ensure a cohesive, interactive, and responsive user experience across the entire site.
+-->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <img src="images/Logo.png" alt="AeroMuse Logo" class="logo" />
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="learn.html">Learn</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button onclick="toggleTheme()"></button>
+    </header>
+
+    <div class="container">
+      <!-- HERO CAROUSEL -->
+      <section class="hero">
+        <div class="carousel">
+          <div class="slide active">
+            <img src="images/Music Staff.png" alt="Music Staff" />
+            <div class="caption">
+              <h1>Learn Music, Your Way</h1>
+              <p>Modern instruments built for creators of all levels.</p>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="images/Instruments.jpg" alt="Instruments" />
+            <div class="caption">
+              <h1>Create Without Limits</h1>
+              <p>Innovative tools designed to inspire creativity.</p>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="images/Keyboard Clipart.png" alt="Keyboard" />
+            <div class="caption">
+              <h1>Play Anywhere</h1>
+              <p>Portable, powerful, and built for modern musicians.</p>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <button class="prev" onclick="changeSlide(-1)">❮</button>
+          <button class="next" onclick="changeSlide(1)">❯</button>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section>
+        <h2>Why AeroMuse?</h2>
+        <div class="grid">
+          <div class="card">
+            <img src="images/Smart Guitar.jpg" alt="Smart Guitar" />
+            <h3>Smart Instruments</h3>
+            <p>AI-assisted learning tools that adapt to your skill level.</p>
+          </div>
+          <div class="card">
+            <img src="images/Unnamed Keyboard.jpg" alt="Keyboard" />
+            <h3>Portable Design</h3>
+            <p>Lightweight builds so you can create music anywhere.</p>
+          </div>
+          <div class="card">
+            <img src="images/MuseScore.png" alt="MuseScore" />
+            <h3>Connected Learning</h3>
+            <p>Sync with apps and lessons for a seamless experience.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED PRODUCTS -->
+      <section>
+        <h2>Featured Instruments</h2>
+        <div class="grid">
+          <div class="card">
+            <img src="images/AeroPad.jpg" alt="AeroPad" />
+            <h3>AeroPad</h3>
+            <p>
+              Portable performance pad with pressure sensitivity for live beat
+              creation.
+            </p>
+          </div>
+
+          <div class="card">
+            <img src="images/SkyKeys.jpg" alt="SkyKeys" />
+            <h3>SkyKeys</h3>
+            <p>
+              A compact smart keyboard with AI-assisted learning and
+              touch-sensitive keys.
+            </p>
+          </div>
+
+          <div class="card">
+            <img src="images/WaveSynth.jpg" alt="WaveSynth" />
+            <h3>WaveSynth</h3>
+            <p>
+              A powerful digital synth with customizable waveforms and
+              studio-quality sound.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CALL TO ACTION -->
+      <section>
+        <h2>Start Your Musical Journey</h2>
+        <p>
+          Explore our instruments, learn new skills, and create something
+          amazing.
+        </p>
+        <button onclick="window.location.href = 'products.html'">
+          Browse Products
+        </button>
+      </section>
+    </div>
+
+    <button onclick="topFunction()" id="topBtn">↑</button>
+
+    <footer>
+      <p>Contact: info@aeromuse.com | (555) 123-4567</p>
+      <p>Learn • Play • Create</p>
+    </footer>
+  </body>
+</html>

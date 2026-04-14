@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Learn</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <img src="images/Logo.png" alt="AeroMuse Logo" class="logo" />
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="learn.html">Learn</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button onclick="toggleTheme()"></button>
+    </header>
+
+    <div class="container">
+      <!-- HERO -->
+      <section class="learn-hero">
+        <h1>Learn</h1>
+        <img src="images/Logo.png" alt="AeroMuse Logo" class="learn-logo" />
+        <p>
+          Explore music fundamentals, get answers fast, and test your knowledge.
+        </p>
+      </section>
+
+      <!-- ================= FAQ ================= -->
+      <section class="learn-section">
+        <h2>FAQ</h2>
+
+        <div class="faq-item">
+          <button class="faq-question">What is AeroMuse?</button>
+          <div class="faq-answer">
+            AeroMuse is a modern music learning and instrument platform designed
+            for all skill levels.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Do I need experience to start?</button>
+          <div class="faq-answer">
+            No — AeroMuse instruments are designed for beginners and
+            professionals alike.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Are the instruments portable?</button>
+          <div class="faq-answer">
+            Yes, most AeroMuse devices are lightweight and designed for travel
+            and mobile creation.
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= QUIZ ================= -->
+      <section class="learn-section">
+        <h2>Mini Quiz</h2>
+
+        <div class="quiz-box">
+          <p>What does AeroMuse focus on?</p>
+
+          <button onclick="checkAnswer(this, true)">
+            Music learning + instruments
+          </button>
+          <button onclick="checkAnswer(this, false)">Gaming hardware</button>
+          <button onclick="checkAnswer(this, false)">Cooking tools</button>
+
+          <p id="quizResult"></p>
+        </div>
+      </section>
+    </div>
+
+    <button onclick="topFunction()" id="topBtn">↑</button>
+
+    <footer>
+      <p>Contact: info@aeromuse.com | (555) 123-4567</p>
+      <p>Learn • Play • Create</p>
+    </footer>
+  </body>
+</html>

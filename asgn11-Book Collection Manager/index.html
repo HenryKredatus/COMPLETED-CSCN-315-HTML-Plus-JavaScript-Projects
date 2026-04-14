@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Book Collection Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>📚 Book Collection Manager</h1>
+    </header>
+
+    <main>
+      <section class="form-section">
+        <h2>Add / Edit Book</h2>
+        <form id="bookForm">
+          <input type="hidden" id="editIndex" />
+          <input type="text" id="title" placeholder="Title" required />
+          <input type="text" id="author" placeholder="Author" required />
+          <input type="text" id="genre" placeholder="Genre" required />
+          <input type="number" id="year" placeholder="Year" required />
+          <button type="submit">Save Book</button>
+        </form>
+      </section>
+
+      <section class="controls">
+        <input
+          type="text"
+          id="search"
+          placeholder="Search by title or author..."
+        />
+        <select id="filterGenre">
+          <option value="">All Genres</option>
+        </select>
+      </section>
+
+      <section class="table-section">
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Genre</th>
+              <th>Year</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="bookTable"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p>CRUD Web App • jQuery + JSON • LocalStorage Enabled</p>
+    </footer>
+
+    <!--
+AI Usage Note:
+
+This project was developed with assistance from ChatGPT.
+
+The AI helped with:
+- Structuring the overall project into separate HTML, CSS, and JavaScript files
+- Designing a clean, professional layout and styling (CSS)
+- Implementing CRUD functionality (Create, Read, Update, Delete) using JavaScript and jQuery
+- Setting up a JSON-based data structure to store book information
+- Adding dynamic features such as search, genre filtering, and table rendering
+- Implementing localStorage to persist data between page reloads
+- Incorporating jQuery animations (e.g., fade-in effects) for improved user experience
+
+All code was reviewed, understood, and tested by the student before submission.
+-->
+  </body>
+</html>

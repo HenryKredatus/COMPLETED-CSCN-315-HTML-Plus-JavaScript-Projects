@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>About</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <img src="images/Logo.png" alt="AeroMuse Logo" class="logo" />
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="learn.html">Learn</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button onclick="toggleTheme()"></button>
+    </header>
+
+    <div class="container">
+      <!-- HERO SECTION -->
+      <section class="about-hero">
+        <h1>About AeroMuse</h1>
+        <p>Empowering creators through innovative music technology.</p>
+      </section>
+
+      <!-- IMAGE + TEXT SECTION -->
+      <section class="about-split">
+        <img src="images/Instruments.jpg" alt="Music Setup" />
+        <div>
+          <h2>Who We Are</h2>
+          <p>
+            AeroMuse is a next-generation music technology company focused on
+            making learning, creating, and performing music more accessible than
+            ever. Founded by engineers and musicians, we combine smart hardware
+            with intuitive design.
+          </p>
+
+          <p>
+            From portable synth pads to AI-assisted keyboards, our mission is to
+            remove barriers between imagination and sound.
+          </p>
+        </div>
+      </section>
+
+      <!-- MISSION CARDS -->
+      <section>
+        <h2>Our Mission</h2>
+
+        <div class="grid">
+          <div class="card">
+            <img src="images/Smart Guitar.jpg" alt="Innovation" />
+            <h3>Innovation</h3>
+            <p>We design tools that push creative boundaries.</p>
+          </div>
+
+          <div class="card">
+            <img src="images/Keyboard Clipart.png" alt="Accessibility" />
+            <h3>Accessibility</h3>
+            <p>Music creation should be for everyone, not just experts.</p>
+          </div>
+
+          <div class="card">
+            <img src="images/Music Staff.png" alt="Creativity" />
+            <h3>Creativity</h3>
+            <p>We inspire people to explore and express themselves.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TIMELINE (UNCHANGED) -->
+      <h2>Our Journey</h2>
+
+      <div class="timeline">
+        <div class="timeline-item" onclick="showTimeline(0)">
+          2019 - Idea Born
+        </div>
+
+        <div class="timeline-item" onclick="showTimeline(1)">
+          2020 - First Prototype
+        </div>
+
+        <div class="timeline-item" onclick="showTimeline(2)">
+          2022 - AeroPad Launch
+        </div>
+
+        <div class="timeline-item" onclick="showTimeline(3)">
+          2025 - AI Music Ecosystem
+        </div>
+      </div>
+
+      <div class="timeline-content" id="timelineContent">
+        Click a year to learn more about AeroMuse’s journey.
+      </div>
+    </div>
+
+    <button onclick="topFunction()" id="topBtn">↑</button>
+
+    <footer>
+      <p>Contact: info@aeromuse.com | (555) 123-4567</p>
+      <p>Learn • Play • Create</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Products</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img src="images/Logo.png" alt="AeroMuse Logo" class="logo" />
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="learn.html">Learn</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button onclick="toggleTheme()"></button>
+    </header>
+
+    <div class="container">
+      <h1>Products</h1>
+
+      <!-- FILTER + SORT -->
+      <div class="controls">
+        <select id="filter">
+          <option value="all">All</option>
+          <option value="keyboard">Keyboards</option>
+          <option value="pad">Pads</option>
+          <option value="synth">Synths</option>
+        </select>
+
+        <select id="sort">
+          <option value="default">Sort</option>
+          <option value="name">Name (A-Z)</option>
+        </select>
+      </div>
+
+      <!-- PRODUCT GRID -->
+      <div class="grid" id="productGrid">
+        <div class="card" data-category="keyboard" data-name="SkyKeys">
+          <img src="images/SkyKeys.jpg" alt="SkyKeys" />
+          <h3>SkyKeys</h3>
+          <p class="desc">
+            A compact smart keyboard with AI-assisted learning and
+            touch-sensitive keys.
+          </p>
+          <button onclick="addToCompare(this)">Compare</button>
+        </div>
+
+        <div class="card" data-category="pad" data-name="AeroPad">
+          <img src="images/AeroPad.jpg" alt="AeroPad" />
+          <h3>AeroPad</h3>
+          <p class="desc">
+            Portable performance pad with pressure sensitivity for live beat
+            creation.
+          </p>
+          <button onclick="addToCompare(this)">Compare</button>
+        </div>
+
+        <div class="card" data-category="synth" data-name="WaveSynth">
+          <img src="images/WaveSynth.jpg" alt="WaveSynth" />
+          <h3>WaveSynth</h3>
+          <p class="desc">
+            A powerful digital synth with customizable waveforms and
+            studio-quality sound.
+          </p>
+          <button onclick="addToCompare(this)">Compare</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPARE DRAWER -->
+    <div id="compareDrawer">
+      <h3>Compare</h3>
+      <ul id="compareList"></ul>
+    </div>
+
+    <button onclick="topFunction()" id="topBtn">↑</button>
+
+    <footer>
+      <p>Contact: info@aeromuse.com | (555) 123-4567</p>
+      <p>Learn • Play • Create</p>
+    </footer>
+  </body>
+</html>

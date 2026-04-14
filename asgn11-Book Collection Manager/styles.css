@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f6f9;
+}
+
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.form-section, .table-section, .controls {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+form input {
+    margin: 5px;
+    padding: 10px;
+    width: 18%;
+}
+
+form button {
+    padding: 10px 20px;
+    background: #3498db;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background: #2980b9;
+}
+
+.controls input, .controls select {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+tr:hover {
+    background: #f1f1f1;
+}
+
+button.edit {
+    background: #f39c12;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
+button.delete {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #ddd;
+}
