@@ -1,0 +1,219 @@
+<!doctype html>
+
+<!-- 
+AI USAGE NOTE (FULL SITE OVERVIEW):
+
+This PineCone Cabin Rentals website was enhanced using HTML, CSS, and JavaScript (including jQuery) to improve usability, interactivity, and visual design across all pages.
+
+========================================================
+1. GLOBAL SITE STRUCTURE
+========================================================
+- Consistent header/navigation used across all pages for unified site experience.
+- Shared footer with contact information standardized across pages.
+- Reusable container and card-based layout system for consistency.
+- Fade-in animation applied globally for smoother page load transitions.
+
+========================================================
+2. CABINS PAGE (FILTER SYSTEM)
+========================================================
+- Each cabin card uses data attributes:
+  - data-sleeps (capacity filtering)
+  - data-luxury (standard/premium/luxury filtering)
+  - data-pets (pet-friendly filtering)
+
+- JavaScript filter system:
+  - Dynamically filters cabins without page reload.
+  - Supports combined filtering (sleep + luxury + pet-friendly).
+  - Live updates on dropdown change events.
+
+========================================================
+3. BOOKING PAGE (FORM VALIDATION + INPUT MASKING)
+========================================================
+- JavaScript form validation added for:
+  - Name (required)
+  - Email (must contain @ validation)
+  - Guests (required selection)
+  - Date (MM/DD/YYYY format validation)
+
+- Date input enhancements:
+  - Input masking formats date automatically as user types.
+  - Removes non-numeric characters.
+  - Automatically inserts slashes (MM/DD/YYYY).
+
+- UX improvements:
+  - Inline error messages under each field.
+  - Success message displayed on valid submission.
+  - Prevents form submission until all validation passes.
+
+========================================================
+4. AMENITIES PAGE (LAYOUT IMPROVEMENTS)
+========================================================
+- Centered content sections using flexbox and container alignment.
+- Structured sections for:
+  - Intro text
+  - Amenities grid cards
+  - Highlight section
+  - Call-to-action (CTA)
+
+- Improved spacing and readability:
+  - Consistent margins between sections.
+  - Center-aligned highlight content for visual focus.
+
+========================================================
+5. GALLERY PAGE (LIGHTBOX FEATURE)
+========================================================
+- jQuery-based lightbox system implemented.
+
+Functionality:
+- Clicking any gallery image opens a full-screen overlay.
+- Selected image is displayed in a centered modal view.
+- Close methods:
+  - Clicking X button
+  - Clicking outside image
+  - Pressing ESC key
+
+Visual improvements:
+- Dark semi-transparent background overlay.
+- Centered image using flexbox.
+- Enlarged responsive display (up to 95vw / 90vh).
+- Smooth fade-in/fade-out transitions.
+
+========================================================
+6. CSS DESIGN SYSTEM
+========================================================
+- Card-based layout used for cabins and amenities.
+- Grid system using auto-fit/minmax for responsiveness.
+- Consistent color palette:
+  - Forest green headers
+  - Warm earth tones for buttons and accents
+- Reusable components:
+  - Buttons (.btn)
+  - Cards (.card, .card-content)
+  - Forms (.booking-form)
+
+- Responsive design:
+  - Flexible grids adapt to screen size.
+  - Images scale proportionally.
+
+========================================================
+7. ANIMATIONS & INTERACTIONS
+========================================================
+- Fade-in animation applied on page load for smooth entry.
+- Hover scaling effect on gallery images.
+- Button hover transitions for better interactivity.
+- Lightbox fade animations for smooth transitions.
+
+========================================================
+FINAL RESULT
+========================================================
+The site now functions as a fully interactive cabin rental platform with:
+- Dynamic filtering system (cabins page)
+- Real-time form validation + input masking (booking page)
+- Responsive amenities layout
+- Modern image lightbox gallery (jQuery-powered)
+- Consistent UI/UX styling across all pages
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PineCone Cabin Rentals</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="images/Logo.png" alt="Logo" />
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="cabins.html">Cabins</a>
+        <a href="booking.html">Booking</a>
+        <a href="amenities.html">Amenities</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <div class="hero fade-in">
+      <div class="hero-content">
+        <h1>Escape to the Mountains</h1>
+        <p>Rustic charm. Modern comfort. Unforgettable views.</p>
+        <a href="cabins.html" class="btn">Explore Cabins</a>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="container fade-in">
+      <!-- INTRO -->
+      <section>
+        <h2>Welcome to PineCone Cabin Rentals</h2>
+        <p>
+          Nestled in the heart of the mountains, our cabins offer the perfect
+          blend of peaceful nature and cozy luxury. Whether you're looking for a
+          romantic getaway or a family adventure, we have something for
+          everyone.
+        </p>
+      </section>
+
+      <!-- FEATURED CABINS -->
+      <section>
+        <h2>Featured Cabins</h2>
+        <div class="card-grid">
+          <div class="card">
+            <img src="images/Pine Cabin.jpg" alt="Whispering Pines" />
+            <div class="card-content">
+              <h3>Whispering Pines</h3>
+              <p>Perfect for couples, surrounded by forest serenity.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="images/Lodge.jpg" alt="Lodge" />
+            <div class="card-content">
+              <h3>Bear Ridge Lodge</h3>
+              <p>Spacious and family-friendly with stunning views.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="images/Sunset Cabin.jpg" alt="Sunset Peak Cabin" />
+            <div class="card-content">
+              <h3>Sunset Peak</h3>
+              <p>Luxury cabin with breathtaking sunset scenery.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE SECTION -->
+      <section>
+        <h2>The Experience</h2>
+        <img
+          src="images/Mountain View.png"
+          alt="Mountain View"
+          style="width: 100%; border-radius: 10px; margin-top: 15px"
+        />
+        <p>
+          Wake up to fresh mountain air, explore scenic trails, and unwind under
+          the stars. PineCone Cabins offers a true escape from the everyday.
+        </p>
+      </section>
+
+      <!-- CALL TO ACTION -->
+      <section style="text-align: center; margin-top: 40px">
+        <h2>Ready for Your Getaway?</h2>
+        <p>Book your cabin today and experience nature like never before.</p>
+        <a href="booking.html" class="btn">Book Now</a>
+      </section>
+    </div>
+
+    <footer>
+      <p>
+        Contact: info@pineconecabins.com | (555) 123-4567 | Mountain View, CO
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

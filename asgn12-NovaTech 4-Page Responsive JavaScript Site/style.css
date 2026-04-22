@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;600&display=swap");
+
+/* =========================
+   BASE / GLOBAL
+========================= */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: #e2e8f0;
+  overflow-x: hidden;
+}
+
+h1,
+h2 {
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 1px;
+}
+
+main {
+  padding: 60px 10%;
+  animation: fadeIn 1.2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   HEADER / NAV
+========================= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(2, 6, 23, 0.8);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: "Orbitron";
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #94a3b8;
+  position: relative;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #38bdf8;
+  transition: 0.3s;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
+nav a.active {
+  color: #38bdf8;
+  text-shadow: 0 0 6px #38bdf8;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #e2e8f0;
+  margin: 5px 0;
+}
+
+/* =========================
+   HERO SLIDER
+========================= */
+.hero {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+}
+
+.hero img {
+  position: absolute;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero img.active {
+  opacity: 1;
+}
+
+/* Arrows */
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(2, 6, 23, 0.6);
+  border: none;
+  color: white;
+  font-size: 28px;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.hero-arrow:hover {
+  background: rgba(56, 189, 248, 0.8);
+}
+
+.hero-arrow.left {
+  left: 10px;
+}
+.hero-arrow.right {
+  right: 10px;
+}
+
+/* Dots */
+.hero-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.hero-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.hero-dots span.active {
+  background: #38bdf8;
+  box-shadow: 0 0 8px #38bdf8;
+}
+
+/* =========================
+   LAYOUT UTILITIES
+========================= */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: 60px 0;
+}
+
+.stats h2 {
+  font-size: 2.5rem;
+  color: #38bdf8;
+  text-shadow: 0 0 10px #38bdf8;
+}
+
+/* =========================
+   SECTIONS / IMAGES
+========================= */
+.section-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  margin: 30px 0;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+  transition: transform 0.4s;
+}
+
+.section-img:hover {
+  transform: scale(1.03);
+}
+
+/* =========================
+   HOME FEATURES / CTA
+========================= */
+.home-feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin: 70px 0;
+}
+
+.home-feature.reverse {
+  direction: rtl;
+}
+
+.home-feature.reverse .feature-text {
+  direction: ltr;
+}
+
+.feature-text p {
+  color: #cbd5f5;
+  line-height: 1.6;
+}
+
+.cta {
+  text-align: center;
+  margin: 80px 0;
+  padding: 40px;
+  background: rgba(30, 41, 59, 0.4);
+  border-radius: 12px;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #38bdf8;
+  color: #020617;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.cta-button:hover {
+  background: #0ea5e9;
+}
+
+/* =========================
+   CONTACT
+========================= */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.contact-form {
+  background: rgba(30, 41, 59, 0.6);
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #020617;
+  color: #e2e8f0;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  box-shadow: 0 0 10px #38bdf8;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.contact-form button:hover {
+  background: #0ea5e9;
+}
+
+/* =========================
+   PRODUCTS
+========================= */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.product-card {
+  background: rgba(30, 41, 59, 0.6);
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
+}
+
+/* =========================
+   TEAM
+========================= */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.team-card {
+  text-align: center;
+  padding: 20px;
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 12px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: #020617;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  header {
+    position: relative;
+  }
+
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(2, 6, 23, 0.95);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.4s;
+  }
+
+  nav.show {
+    max-height: 300px;
+    opacity: 1;
+  }
+
+  nav a {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .two-col,
+  .home-feature,
+  .contact-container,
+  .product-grid,
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PineCone Cabin Rentals</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="images/Logo.png" alt="Logo" />
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="cabins.html">Cabins</a>
+        <a href="booking.html">Booking</a>
+        <a href="amenities.html">Amenities</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+    </header>
+
+    <div class="hero fade-in">
+      <div class="hero-content">
+        <h1>Booking Inquiry</h1>
+      </div>
+    </div>
+
+    <div class="container fade-in">
+      <div class="booking-form">
+        <form id="bookingForm">
+          <input type="text" id="name" placeholder="Full Name" />
+          <span class="error" id="nameError"></span>
+
+          <input type="email" id="email" placeholder="Email Address" />
+          <span class="error" id="emailError"></span>
+
+          <input
+            type="text"
+            id="date"
+            placeholder="MM/DD/YYYY"
+            maxlength="10"
+          />
+          <span class="error" id="dateError"></span>
+
+          <select id="guests">
+            <option value="">Number of Guests</option>
+            <option value="2">2 Guests</option>
+            <option value="4">4 Guests</option>
+            <option value="6">6+ Guests</option>
+          </select>
+          <span class="error" id="guestError"></span>
+
+          <textarea
+            id="notes"
+            placeholder="Additional Requests (optional)"
+          ></textarea>
+
+          <button type="submit">Submit Inquiry</button>
+
+          <p id="successMessage"></p>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        Contact: info@pineconecabins.com | (555) 123-4567 | Mountain View, CO
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

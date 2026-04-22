@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PineCone Cabin Rentals</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="images/Logo.png" alt="Logo" />
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="cabins.html">Cabins</a>
+        <a href="booking.html">Booking</a>
+        <a href="amenities.html">Amenities</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+    </header>
+
+    <div class="hero fade-in">
+      <div class="hero-content">
+        <h1>Cabin Listings</h1>
+      </div>
+    </div>
+
+    <div class="container fade-in">
+      <!-- FILTER CONTROLS -->
+      <div class="filters">
+        <select id="sleepFilter">
+          <option value="all">All Sleeps</option>
+          <option value="2">Sleeps 2</option>
+          <option value="4">Sleeps 4</option>
+          <option value="6">Sleeps 6+</option>
+        </select>
+
+        <select id="luxuryFilter">
+          <option value="all">All Luxury Levels</option>
+          <option value="standard">Standard</option>
+          <option value="premium">Premium</option>
+          <option value="luxury">Luxury</option>
+        </select>
+
+        <select id="petFilter">
+          <option value="all">Pet Friendly?</option>
+          <option value="yes">Pet Friendly</option>
+          <option value="no">No Pets</option>
+        </select>
+      </div>
+
+      <!-- CABINS -->
+      <div class="card-grid">
+        <!-- 1 -->
+        <div
+          class="card"
+          data-sleeps="2"
+          data-luxury="standard"
+          data-pets="yes"
+        >
+          <img src="images/Pine Cabin.jpg" alt="Whispering Pines" />
+          <div class="card-content">
+            <h3>Whispering Pines</h3>
+            <p>
+              Perfect for couples seeking a quiet retreat surrounded by towering
+              pines and peaceful forest sounds.
+            </p>
+            <ul class="cabin-meta">
+              <li><strong>Sleeps:</strong> 2</li>
+              <li><strong>Luxury:</strong> Standard</li>
+              <li><strong>Pet Friendly:</strong> Yes</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="card" data-sleeps="4" data-luxury="premium" data-pets="yes">
+          <img src="images/Pine Cabin 2.jpg" alt="Pine Cabin" />
+          <div class="card-content">
+            <h3>Pine Forest Cabin</h3>
+            <p>
+              A cozy family getaway tucked deep in the woods with a fireplace
+              and spacious deck.
+            </p>
+            <ul class="cabin-meta">
+              <li><strong>Sleeps:</strong> 4</li>
+              <li><strong>Luxury:</strong> Premium</li>
+              <li><strong>Pet Friendly:</strong> Yes</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="card" data-sleeps="4" data-luxury="premium" data-pets="no">
+          <img src="images/Sunset Cabin.jpg" alt="Sunset Cabin" />
+          <div class="card-content">
+            <h3>Sunset Overlook</h3>
+            <p>
+              Enjoy breathtaking sunset views from a modern cabin perched above
+              the valley.
+            </p>
+            <ul class="cabin-meta">
+              <li><strong>Sleeps:</strong> 4</li>
+              <li><strong>Luxury:</strong> Premium</li>
+              <li><strong>Pet Friendly:</strong> No</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="card" data-sleeps="6" data-luxury="luxury" data-pets="no">
+          <img src="images/Lodge.jpg" alt="Bear River Lodge" />
+          <div class="card-content">
+            <h3>Bear Ridge Lodge</h3>
+            <p>
+              A spacious luxury lodge with hot tub, mountain views, and room for
+              the whole group.
+            </p>
+            <ul class="cabin-meta">
+              <li><strong>Sleeps:</strong> 6+</li>
+              <li><strong>Luxury:</strong> Luxury</li>
+              <li><strong>Pet Friendly:</strong> No</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="card" data-sleeps="2" data-luxury="premium" data-pets="yes">
+          <img src="images/Cedar Hollow.jpg" alt="Cedar Hollow" />
+          <div class="card-content">
+            <h3>Cedar Hollow</h3>
+            <p>
+              Romantic cabin with rustic charm, cedar interiors, and a private
+              outdoor fire pit.
+            </p>
+            <ul class="cabin-meta">
+              <li><strong>Sleeps:</strong> 2</li>
+              <li><strong>Luxury:</strong> Premium</li>
+              <li><strong>Pet Friendly:</strong> Yes</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="card" data-sleeps="6" data-luxury="luxury" data-pets="yes">
+          <img src="images/Timberline Retreat.jpg" alt="Timberline Retreat" />
+          <div class="card-content">
+            <h3>Timberline Retreat</h3>
+            <p>
+              Luxury mountain escape with panoramic views, modern kitchen, and
+              large living space.
+            </p>
+            <ul class="cabin-meta">
+              <li><strong>Sleeps:</strong> 6+</li>
+              <li><strong>Luxury:</strong> Luxury</li>
+              <li><strong>Pet Friendly:</strong> Yes</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="card" data-sleeps="4" data-luxury="standard" data-pets="no">
+          <img src="images/Maple Creek.jpg" alt="Maple Creek Cabin" />
+          <div class="card-content">
+            <h3>Maple Creek Cabin</h3>
+            <p>
+              Charming cabin beside a flowing creek, perfect for relaxing and
+              reconnecting with nature.
+            </p>
+            <ul class="cabin-meta">
+              <li><strong>Sleeps:</strong> 4</li>
+              <li><strong>Luxury:</strong> Standard</li>
+              <li><strong>Pet Friendly:</strong> No</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="card" data-sleeps="6" data-luxury="premium" data-pets="yes">
+          <img src="images/Eagle's Nest.jpg" alt="Eagle's Nest Lodge" />
+          <div class="card-content">
+            <h3>Eagle's Nest Lodge</h3>
+            <p>
+              Elevated mountain lodge offering sweeping views and plenty of
+              space for families.
+            </p>
+            <ul class="cabin-meta">
+              <li><strong>Sleeps:</strong> 6+</li>
+              <li><strong>Luxury:</strong> Premium</li>
+              <li><strong>Pet Friendly:</strong> Yes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        Contact: info@pineconecabins.com | (555) 123-4567 | Mountain View, CO
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
