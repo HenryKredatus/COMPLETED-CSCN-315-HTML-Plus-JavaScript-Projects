@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Trainers</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="images/Logo.png" alt="Logo" />
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="classes.html">Classes</a>
+        <a href="membership.html">Membership</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="success.html">Success Stories</a>
+      </nav>
+    </header>
+
+    <div class="section trainers-grid">
+      <!-- TRAINER 1 -->
+      <div
+        class="card trainer"
+        data-name="Alex Carter"
+        data-role="HIIT Specialist"
+        data-img="images/Alex.png"
+        data-bio="Certified HIIT coach with 8+ years of experience helping clients burn fat, build endurance, and push past limits."
+      >
+        <img src="images/Alex.png" alt="Alex Carter" />
+        <div class="trainer-info">
+          <h3>Alex Carter</h3>
+          <p>HIIT Specialist</p>
+        </div>
+      </div>
+
+      <!-- TRAINER 2 -->
+      <div
+        class="card trainer"
+        data-name="Maria Lopez"
+        data-role="Strength Coach"
+        data-img="images/Maria.jpg"
+        data-bio="Strength and conditioning expert focused on muscle growth, powerlifting, and athletic performance."
+      >
+        <img src="images/Maria.jpg" alt="Maria Lopez" />
+        <div class="trainer-info">
+          <h3>Maria Lopez</h3>
+          <p>Strength Coach</p>
+        </div>
+      </div>
+
+      <!-- TRAINER 3 -->
+      <div
+        class="card trainer"
+        data-name="Jordan Blake"
+        data-role="Yoga Instructor"
+        data-img="images/Jordan.png"
+        data-bio="Certified yoga instructor helping clients improve flexibility, balance, and mental clarity."
+      >
+        <img src="images/Jordan.png" alt="Jordan Blake" />
+        <div class="trainer-info">
+          <h3>Jordan Blake</h3>
+          <p>Yoga Instructor</p>
+        </div>
+      </div>
+
+      <!-- TRAINER 4 -->
+      <div
+        class="card trainer"
+        data-name="Derek Shaw"
+        data-role="Personal Trainer"
+        data-img="images/Derek.jpg"
+        data-bio="Focused on weight loss, personalized coaching, and long-term fitness transformation plans."
+      >
+        <img src="images/Derek.jpg" alt="Derek" />
+        <div class="trainer-info">
+          <h3>Derek Shaw</h3>
+          <p>Personal Trainer</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal hidden">
+      <div class="modal-content modal-large">
+        <span id="closeModal">&times;</span>
+
+        <img id="modalImg" src="" alt="Trainer image" />
+
+        <h2 id="modalName"></h2>
+        <h4 id="modalRole"></h4>
+        <p id="modalBio"></p>
+      </div>
+    </div>
+
+    <footer>
+      <p>Galaxy Fitness Center</p>
+      <p>Email: contact@galaxyfitness.com | Phone: (555) 123-4567</p>
+      <p>123 Cosmic Way, Orbit City</p>
+    </footer>
+  </body>
+</html>
