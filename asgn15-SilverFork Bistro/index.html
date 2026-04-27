@@ -1,0 +1,122 @@
+<!doctype html>
+
+<!--
+AI USAGE NOTE:
+
+This website was developed with the assistance of an AI tool (ChatGPT) to support
+learning and implementation of web development concepts.
+
+AI was used to help:
+- Structure multiple HTML pages (home, menu, reservations, chefs, events)
+- Create and refine a shared CSS stylesheet for a cohesive, fully styled design
+- Implement a responsive navigation bar and footer across all pages
+- Design and style hero sections with background images and overlays for readability
+- Build interactive features using JavaScript and jQuery, including:
+  • A dynamic daily specials banner with randomization
+  • A sliding/fading featured specials carousel
+  • A category-based menu filtering system (tab interface)
+  • A reservation form with validation and animated user feedback
+- Improve UI/UX with animations, hover effects, and layout enhancements
+- Apply accessibility practices such as alt text for images and aria-label usage where appropriate
+
+All code was reviewed, edited, and integrated manually to ensure understanding
+and proper functionality. The final design, structure, and content reflect my own
+decisions and customization based on the project requirements.
+
+-->
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>SilverFork Bistro</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <img src="images/Logo.png" alt="SilverFork Bistro logo" />
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="reservations.html">Reservations</a>
+        <a href="chefs.html">Chefs</a>
+        <a href="events.html">Events</a>
+      </div>
+    </div>
+
+    <!-- HERO / INTRO -->
+    <div class="hero">
+      <div class="hero-content">
+        <h1>SilverFork Bistro</h1>
+        <p>Locally sourced. Elegantly crafted. Unforgettable dining.</p>
+      </div>
+    </div>
+
+    <!-- DAILY SPECIAL BANNER -->
+    <div class="special-banner">
+      <p id="special-text">Today's Special: Loading...</p>
+    </div>
+
+    <!-- SLIDING SPECIALS -->
+    <div class="full-slider-section">
+      <h2 class="section-title">Featured Specials</h2>
+
+      <div class="slider">
+        <div class="slide active">
+          <div class="slide-content">
+            <img src="images/TS.jpg" alt="Truffle Steak" />
+            <div class="slide-text">
+              <h3>Truffle Steak</h3>
+              <p>
+                Premium cut steak finished with rich truffle butter and roasted
+                vegetables.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-content">
+            <img src="images/LHS.jpg" alt="Lemon Herb Salmon" />
+            <div class="slide-text">
+              <h3>Lemon Herb Salmon</h3>
+              <p>Fresh Atlantic salmon glazed with citrus and herbs.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-content">
+            <img src="images/CLC.jpg" alt="Chocolate Lava Cake" />
+            <div class="slide-text">
+              <h3>Chocolate Lava Cake</h3>
+              <p>Warm chocolate cake with a rich molten center.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-content">
+            <img src="images/WMR.jpg" alt="Wild Mushroom Risotto" />
+            <div class="slide-text">
+              <h3>Wild Mushroom Risotto</h3>
+              <p>Creamy risotto with seasonal wild mushrooms and parmesan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>SilverFork Bistro | 123 Culinary Ave, Food City</p>
+      <p>Email: contact@silverfork.com | Phone: (555) 123-4567</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,523 @@
+/* =======================
+   GLOBAL RESET & BASE
+======================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Georgia", serif;
+  background: #111;
+  color: #eee;
+  line-height: 1.6;
+}
+
+a {
+  color: #d4af37;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =======================
+   LAYOUT
+======================= */
+.section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* =======================
+   NAVBAR
+======================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  width: 150px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  max-height: 100%;
+  width: auto;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+/* =======================
+   HERO
+======================= */
+.hero {
+  position: relative;
+  height: 75vh;
+  background: url("images/Restaurant.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 3em;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #ddd;
+}
+
+/* =======================
+   CARDS / MENU ITEMS
+======================= */
+.card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* =======================
+   UNIFIED CARD TYPOGRAPHY
+   (Chefs + Events)
+======================= */
+
+/* Shared card heading */
+.chef-card h3,
+.event-card h3 {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #fff;
+  margin: 10px 0 6px;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+/* Shared sub-label (role / date) */
+.chef-card .role,
+.event-date {
+  font-size: 0.85em;
+  font-weight: 600;
+  color: #d4af37;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Shared description text */
+.chef-card p,
+.event-card p {
+  font-size: 0.95em;
+  font-weight: 300;
+  color: #ccc;
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+
+/* Optional: subtle visual separation */
+.chef-card h3,
+.event-card h3 {
+  border-bottom: 1px solid #333;
+  padding-bottom: 6px;
+}
+
+/* =======================
+   BUTTONS
+======================= */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #d4af37;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #d4af37;
+  color: #000;
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+  background: #000;
+  padding: 30px;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* =======================
+   SPECIAL BANNER
+======================= */
+.special-banner {
+  background: #d4af37;
+  color: #000;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* if "Featured Specials" is a section title under it */
+.section-title {
+  margin-top: 20px;
+}
+
+/* =======================
+   SLIDER
+======================= */
+.slider {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  height: 320px;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide-content {
+  display: flex;
+  height: 100%;
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.slide-content img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.slide-text {
+  padding: 30px;
+  width: 50%;
+}
+
+.slide-text h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.slide-text p {
+  color: #ccc;
+}
+
+/* =======================
+   MENU TABS
+======================= */
+.tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.tab {
+  padding: 10px 18px;
+  border: 1px solid #333;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tab:hover {
+  background: #222;
+}
+
+.tab.active {
+  background: #d4af37;
+  color: #000;
+}
+
+.menu-item {
+  display: none;
+}
+
+.menu-item.show {
+  display: block;
+}
+
+.price {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #d4af37;
+}
+
+/* =======================
+   FORMS CORE
+======================= */
+.field {
+  position: relative;
+  margin: 12px 0;
+}
+
+input,
+select {
+  appearance: none;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 12px 38px 12px 12px;
+  background: #222;
+  border: 1px solid transparent;
+  color: #fff;
+}
+
+/* ICONS */
+.icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.field.error .icon::before {
+  content: "✕";
+  color: #ff4d4d;
+}
+
+.field.success .icon::before {
+  content: "✓";
+  color: #2ecc71;
+}
+
+/* MESSAGES */
+.msg {
+  display: none;
+  font-size: 0.8em;
+  color: #ff4d4d;
+}
+
+/* SHAKE */
+.shake {
+  animation: shake 0.25s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  75% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* =======================
+   TIME PICKER
+======================= */
+.time-wrapper {
+  position: relative;
+}
+
+.time-popup {
+  display: none;
+  position: absolute;
+  top: 110%;
+  width: 100%;
+  background: #111;
+  border: 1px solid #333;
+  z-index: 100;
+}
+
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  padding: 10px;
+}
+
+.time-option {
+  padding: 8px;
+  text-align: center;
+  background: #222;
+  cursor: pointer;
+}
+
+.time-option:hover {
+  background: #d4af37;
+  color: #000;
+}
+
+/* =======================
+   CALENDAR
+======================= */
+.calendar-wrapper {
+  position: relative;
+}
+
+.calendar-popup {
+  display: none;
+  position: absolute;
+  top: 110%;
+  width: 100%;
+  background: #111;
+  border: 1px solid #333;
+  z-index: 200;
+  padding: 10px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  color: #d4af37;
+}
+
+.calendar-header button {
+  background: none;
+  border: none;
+  color: #d4af37;
+  cursor: pointer;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.day {
+  padding: 8px;
+  text-align: center;
+  background: #222;
+  cursor: pointer;
+}
+
+.day:hover {
+  background: #d4af37;
+  color: #000;
+}
+
+.day.empty {
+  background: transparent;
+  cursor: default;
+}
+
+.day.selected {
+  background: #d4af37;
+  color: #000;
+}
+
+.day.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* =======================
+   FEEDBACK
+======================= */
+#success-message {
+  margin-top: 10px;
+  text-align: center;
+  color: #2ecc71;
+  font-weight: bold;
+  display: none;
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 768px) {
+  .slide-content {
+    flex-direction: column;
+  }
+
+  .slide-content img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .slide-text {
+    width: 100%;
+  }
+}
